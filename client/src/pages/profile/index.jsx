@@ -64,13 +64,12 @@ const Profile = () => {
     }
 
     const handleFileInputClick = () => {
-        alert('open');
+        alert('Do you want to change your profile image?');
         fileInputRef.current.click();
     };
 
     const handleImageChange = async(event) => {
         const file = event.target.files[0];
-        console.log(event.target.files);
         if(file){
             const formData = new FormData();
             formData.append("profile-image", file);
